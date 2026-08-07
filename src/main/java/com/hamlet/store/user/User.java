@@ -1,7 +1,7 @@
 package com.hamlet.store.user;
 
 import com.hamlet.store.common.BaseEntity;
-import com.hamlet.store.gameRequest.GameRequest;
+import com.hamlet.store.gameRequest.GameRequestEntity;
 import com.hamlet.store.notification.Notification;
 import com.hamlet.store.wishlist.Wishlist;
 import jakarta.persistence.Entity;
@@ -35,5 +35,5 @@ public class User extends BaseEntity {
     private List<Notification> notifications;
 
     @OneToMany(mappedBy = "user")
-    private List<GameRequest> gameRequests;
+    private List<GameRequestEntity> gameRequests;
 }

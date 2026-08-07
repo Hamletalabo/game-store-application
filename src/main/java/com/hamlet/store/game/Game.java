@@ -3,6 +3,8 @@ package com.hamlet.store.game;
 import com.hamlet.store.category.Category;
 import com.hamlet.store.comment.Comment;
 import com.hamlet.store.common.BaseEntity;
+import com.hamlet.store.platform.Console;
+import com.hamlet.store.platform.Platform;
 import com.hamlet.store.wishlist.Wishlist;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,10 +21,11 @@ import java.util.List;
 @Entity
 public class Game extends BaseEntity {
 
+    @Column(nullable = false, unique = true)
     private String title;
 
-    @Enumerated (EnumType.STRING)
-    private SupportedPlatforms supportedPlatforms; //PC, XBOX, PLAYSTATION, NINTENDO, ETC.
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Platform> platforms; //PC, XBOX, PLAYSTATION, NINTENDO, ETC.
 
     private String coverPicture;
 

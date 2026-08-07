@@ -26,6 +26,6 @@ public class Wishlist extends BaseEntity {
     @OneToOne
     private User user;
 
-    @OneToMany(mappedBy = "wishlist", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "wishlists", fetch = FetchType.EAGER)
     private List<Game> games;
 }
