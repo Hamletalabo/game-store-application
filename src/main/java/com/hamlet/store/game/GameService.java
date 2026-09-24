@@ -13,5 +13,6 @@ public interface GameService {
 
     PageResponse<GameResponse> findAllGames(int page, int size);
 
-    void deleteGame(String gameId);
+    void deleteGame(String gameId, boolean confirm);
+;
 }

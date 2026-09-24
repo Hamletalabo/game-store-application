@@ -12,10 +12,10 @@ import java.util.List;
 
 public class PageResponse<T> {
     private List<T> content;
-    private int number;
+    private int pageNumber;
     private int size;
-    private int totalElements;
+    private Long totalElements;
     private int totalPages;
-    private boolean last;
-    private boolean first;
+    private boolean isFirst;
+    private boolean isLast;
 }
